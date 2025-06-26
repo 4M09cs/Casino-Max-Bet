@@ -6,6 +6,7 @@ let picturesrc = document.getElementById("rouletteBild");
 let Guthaben = parseFloat(localStorage.getItem("signal"));
 let startButton = document.getElementById("start");
 let error = document.getElementById("error");
+let gewonnen = document.getElementById("gewonnen")
 
 let picture = ""
 let rightColor = ""
@@ -56,6 +57,7 @@ async function start(pressedButton){
         Guthaben += bet * multiplier;
         localStorage.setItem("signal", Guthaben);
         guthabenCounter.textContent = user + ": " + Guthaben.toFixed(2).replace(".", ",") + "€";
+        gewonnen.textContent = "Du hast " + bet * multiplier + "€ gewonnen!"
         
     }
     await Sleep(1)
