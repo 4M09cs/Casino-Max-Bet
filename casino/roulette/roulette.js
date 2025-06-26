@@ -6,7 +6,7 @@ let picturesrc = document.getElementById("rouletteBild");
 let Guthaben = parseFloat(localStorage.getItem("signal"));
 let startButton = document.getElementById("start");
 let error = document.getElementById("error");
-let gewonnen = document.getElementById("gewonnen")
+let gewonnen = document.getElementById("gewonnen");
 
 let picture = ""
 let rightColor = ""
@@ -54,10 +54,11 @@ async function start(pressedButton){
     picturesrc.src = "../roulette/pics/" + picture;
 
     if (pressedButton.id === rightColor){
-        Guthaben += bet * multiplier;
+        win = bet * multiplier
+        Guthaben += win
         localStorage.setItem("signal", Guthaben);
         guthabenCounter.textContent = user + ": " + Guthaben.toFixed(2).replace(".", ",") + "€";
-        gewonnen.textContent = "Du hast " + bet * multiplier + "€ gewonnen!"
+        gewonnen.textContent = "Du hast " + win + "€ gewonnen!"
         
     }
     await Sleep(1)
