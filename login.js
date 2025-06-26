@@ -17,7 +17,7 @@ function autoLog(){
     if (localStorage.getItem("user") === null){
         return
     } else
-        window.location.href = "/casino/home/home.html";
+        window.location.href = "/Casino-Max-Bet/casino/home/home.html";
 }
 
 
@@ -32,7 +32,7 @@ function check(){
         localStorage.clear()   
         localStorage.setItem("user", users.AndreasStavenhagen.name)                   
         localStorage.setItem("signal", users.AndreasStavenhagen.Geld);
-        window.location.href = "/casino/home/home.html";
+        window.location.href = "/Casino-Max-Bet/casino/home/home.html";
        
        
        
